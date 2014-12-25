@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VozniRedi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_szmain">SZMainActivity</string>
+	<string name="szSet1">Dodaj med priljubljene</string>
+	<string-array name="seznamPostaj">
+		<item>Ajdovščina</item>
+		<item>Anhovo</item>
+		<item>Atomske Toplice hotel</item>
+		<item>Avče</item>
+		<item>Batuje</item>
+		<item>Birčna vas</item>
+		<item>Bistrica ob Dravi</item>
+		<item>Blanca</item>
+		<item>Bled Jezero</item>
+		<item>Bohinjska Bela</item>
+		<item>Bohinjska Bistrica</item>
+		<item>Borovnica</item>
+		<item>Boštanj</item>
+		<item>Branik</item>
+		<item>Breg</item>
+		<item>Brestanica</item>
+		<item>Brezovica</item>
+		<item>Brežice</item>
+		<item>Celje</item>
+		<item>Celje Lava</item>
+		<item>Cesta</item>
+		<item>Cirknica</item>
+		<item>Cirkovce</item>
+		<item>črnomelj</item>
+		<item>črnotiče</item>
+		<item>Divača</item>
+		<item>Divača(Škocjanske jame)</item>
+		<item>Dobova</item>
+		<item>Dobovec</item>
+		<item>Dobravice</item>
+		<item>Dobravlje</item>
+		<item>Dobrije</item>
+		<item>Dolga Gora</item>
+		<item>Domžale</item>
+		<item>Dornberk</item>
+		<item>Dornberk vas</item>
+		<item>Dravograd</item>
+		<item>Duplica-Bakovnik</item>
+		<item>Dutovlje</item>
+		<item>Fala</item>
+		<item>Florjan</item>
+		<item>Frankovci</item>
+		<item>Gaber</item>
+		<item>Globoko</item>
+		<item>Gomila</item>
+		<item>Gornje Ležeče</item>
+		<item>Gornji Petrovci</item>
+		<item>Gradac</item>
+		<item>Grahovo</item>
+		<item>Grlava</item>
+		<item>Grobelno</item>
+		<item>Grosuplje</item>
+		<item>Hajdina</item>
+		<item>Hoče</item>
+		<item>Hodoš</item>
+		<item>Holmec</item>
+		<item>Homec pri Kamniku</item>
+		<item>Hrastnik</item>
+		<item>Hrastovlje</item>
+		<item>Hrpelje-Kozina</item>
+		<item>Hudajužna</item>
+		<item>Hudo</item>
+		<item>Ilirska Bistrica</item>
+		<item>Imeno</item>
+		<item>Ivančna Gorica</item>
+		<item>Ivanjkovci</item>
+		<item>Jarše-Mengeš</item>
+		<item>Jelovec</item>
+		<item>Jesenice</item>
+		<item>Jevnica</item>
+		<item>Kamnik</item>
+		<item>Kamnik Graben</item>
+		<item>Kamnik mesto</item>
+		<item>Kamnje</item>
+		<item>Kanal</item>
+		<item>Kidričevo</item>
+		<item>Kilovče</item>
+		<item>Kočna</item>
+		<item>Koper</item>
+		<item>Kopriva</item>
+		<item>Košaki</item>
+		<item>Košana</item>
+		<item>Kranj</item>
+		<item>Kreplje</item>
+		<item>Kresnice</item>
+		<item>Krško</item>
+		<item>Laško</item>
+		<item>Laze</item>
+		<item>Lesce-Bled</item>
+		<item>Libna</item>
+		<item>Limbuš</item>
+		<item>Lipovci</item>
+		<item>Litija</item>
+		<item>Litija(Dom-Tisje)</item>
+		<item>Litija(Šmartno-Cerkovnik)</item>
+		<item>Litija(Zavrstnik pri Tatjani)</item>
+		<item>Litostroj</item>
+		<item>Ljubljana</item>
+		<item>Ljubljana Brinje</item>
+		<item>Ljubljana črnuče</item>
+		<item>Ljubljana Ježica</item>
+		<item>Ljubljana Moste (BTC)</item>
+		<item>Ljubljana Polje</item>
+		<item>Ljubljana Rakovnik</item>
+		<item>Ljubljana Stegne</item>
+		<item>Ljubljana Tivoli</item>
+		<item>Ljubljana Vižmarje</item>
+		<item>Ljubljana Vodmat</item>
+		<item>Ljubljana Zalog</item>
+		<item>Ljutomer</item>
+		<item>Ljutomer mesto</item>
+		<item>Logatec</item>
+		<item>Loka</item>
+		<item>Mačkovci</item>
+		<item>Maribor</item>
+		<item>Maribor Sokolska</item>
+		<item>Maribor Studenci</item>
+		<item>Maribor Tabor</item>
+		<item>Maribor Tezno</item>
+		<item>Marles</item>
+		<item>Medno</item>
+		<item>Medvode</item>
+		<item>Mekotnjak</item>
+		<item>Mestinje</item>
+		<item>Metlika</item>
+		<item>Mirna</item>
+		<item>Mirna Peč</item>
+		<item>Mlačevo</item>
+		<item>Mokronog</item>
+		<item>Most na Soči</item>
+		<item>Moškanjci</item>
+		<item>Murska Sobota</item>
+		<item>Narin</item>
+		<item>Nomenj</item>
+		<item>Notranje Gorice</item>
+		<item>Nova Gorica</item>
+		<item>Novo mesto</item>
+		<item>Novo mesto Center</item>
+		<item>Novo mesto Kandija</item>
+		<item>Obrež</item>
+		<item>Okroglica</item>
+		<item>Orehova vas</item>
+		<item>Ormož</item>
+		<item>Osluševci</item>
+		<item>Ostrožno</item>
+		<item>Otoče</item>
+		<item>Otovec</item>
+		<item>Ožbalt</item>
+		<item>Paška vas</item>
+		<item>Pavlovci</item>
+		<item>Pesnica</item>
+		<item>Petrovče</item>
+		<item>Pijavice</item>
+		<item>Pivka</item>
+		<item>Planina</item>
+		<item>Plave</item>
+		<item>Podbrdo</item>
+		<item>Podčetrtek</item>
+		<item>Podčetrtek Toplice</item>
+		<item>Podgorje</item>
+		<item>Podhom</item>
+		<item>Podklanc</item>
+		<item>Podmelec</item>
+		<item>Podnart</item>
+		<item>Podplat</item>
+		<item>Podvelka</item>
+		<item>Poljčane</item>
+		<item>Polzela</item>
+		<item>Polževo</item>
+		<item>Ponikva</item>
+		<item>Ponikve na Dolenjskem</item>
+		<item>Postojna</item>
+		<item>Povir</item>
+		<item>Pragersko</item>
+		<item>Preserje</item>
+		<item>Prestranek</item>
+		<item>Prešnica</item>
+		<item>Prevalje</item>
+		<item>Pristava</item>
+		<item>Prvačina</item>
+		<item>Ptuj</item>
+		<item>Puconci</item>
+		<item>Pušenci</item>
+		<item>Rače</item>
+		<item>Radeče</item>
+		<item>Radohova vas</item>
+		<item>Radovljica</item>
+		<item>Rakek</item>
+		<item>Rakitovec</item>
+		<item>Ravne na Koroškem</item>
+		<item>Reteče</item>
+		<item>Rimske Toplice</item>
+		<item>Rjavica</item>
+		<item>Rodica</item>
+		<item>Rodik</item>
+		<item>Rogaška Slatina</item>
+		<item>Rogatec</item>
+		<item>Rosalnice</item>
+		<item>Rožni Dol</item>
+		<item>Ruše</item>
+		<item>Ruše tovarna</item>
+		<item>Ruta</item>
+		<item>Sava</item>
+		<item>Semič</item>
+		<item>Sevnica</item>
+		<item>Sežana</item>
+		<item>Slovenska Bistrica</item>
+		<item>Slovenski Javornik</item>
+		<item>Sodna vas</item>
+		<item>Solkan</item>
+		<item>Središče</item>
+		<item>Steske</item>
+		<item>Stranje</item>
+		<item>Strnišče</item>
+		<item>Sveti Danijel</item>
+		<item>Sveti Rok ob Sotli</item>
+		<item>Sveti Vid</item>
+		<item>Šalovci</item>
+		<item>Šempeter pri Gorici</item>
+		<item>Šempeter v Savinjski dolini</item>
+		<item>Šentilj</item>
+		<item>Šentjur</item>
+		<item>Šentlovrenc</item>
+		<item>Šentrupert</item>
+		<item>Šentvid pri Grobelnem</item>
+		<item>Šentvid pri Stični</item>
+		<item>Šikole</item>
+		<item>Škofja Loka</item>
+		<item>Škofljica</item>
+		<item>Šmarca</item>
+		<item>Šmarje pri Jelšah</item>
+		<item>Šmarje-Sap</item>
+		<item>Šmartno ob Paki</item>
+		<item>Šoštanj</item>
+		<item>Štanjel</item>
+		<item>Štefan</item>
+		<item>Štore</item>
+		<item>Tekačevo</item>
+		<item>Trbonje</item>
+		<item>Trbonjsko jezero</item>
+		<item>Trbovlje</item>
+		<item>Trebnje</item>
+		<item>Trebnje Kamna Gora</item>
+		<item>Trzin</item>
+		<item>Trzin ind. cona</item>
+		<item>Trzin Mlake</item>
+		<item>Tržišče</item>
+		<item>Uršna sela</item>
+		<item>Velenje</item>
+		<item>Velenje Pesje</item>
+		<item>Velika Loka</item>
+		<item>Velika Nedelja</item>
+		<item>Verd</item>
+		<item>Veržej</item>
+		<item>Vidina</item>
+		<item>Vintgar</item>
+		<item>Višnja Gora</item>
+		<item>Volčja Draga</item>
+		<item>Vuhred</item>
+		<item>Vuhred elektrarna</item>
+		<item>Vuzenica</item>
+		<item>Zagorje</item>
+		<item>Zamušani</item>
+		<item>Zazid</item>
+		<item>Zidani Most</item>
+		<item>Žalec</item>
+		<item>Žalna</item>
+		<item>Žirovnica</item>
+	</string-array>
+
+</resources>
