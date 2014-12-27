@@ -2,6 +2,7 @@ package com.markvika.vozniredi;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,11 +24,13 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.InetAddress;
+
 
 public class SZMainActivity extends Activity {
 
 	//@Override
-//	Context context = getApplicationContext();
+//	private final Context context = getApplicationContext();
 
 	private Spinner odhodnaPostaja;
 	private Spinner prihodnaPostaja;
@@ -129,8 +132,27 @@ public class SZMainActivity extends Activity {
 			return null;
 		}
 
+//		public boolean isInternetAvailable() {
+//			try {
+//				InetAddress ipAddr = InetAddress.getByName("google.com"); //You can replace it with your name
+//				if (!ipAddr.isReachable(1000)) {
+//					return false;
+//				} else {
+//					return true;
+//				}
+//
+//			} catch (Exception e) {
+//				return false;
+//			}
+//
+//		}
+
 		@Override
 		protected void onPostExecute(JSONObject result) {
+//			if(!isInternetAvailable()) {
+//				Toast.makeText(context, "Ni internetne povezave.", Toast.LENGTH_LONG).show();
+//				return;
+//			} else
 			if (result == null) {
 				Toast.makeText(context, "Prislo je do napake.", Toast.LENGTH_SHORT).show();
 				return;
@@ -138,21 +160,23 @@ public class SZMainActivity extends Activity {
 
 			try {
 				// prejeti objekt prikazemo na ekratnu
-				arrivals.setText(result.toString(2));
+//				arrivals.setText(result.toString(2));
 //				arrivals.setText(address);
-//			if(y == 0){
-//				Toast.makeText(context, "Prosimo izberite različne postaje.", Toast.LENGTH_SHORT);
-//			}
-			} catch (JSONException e) {
+				Intent json = new Intent(SZMainActivity.this, SZResultActivity.class);
+				json.putExtra("json", result.toString());
+				startActivity(json);
+			if(y == 0){
+				Toast.makeText(context, "Prosimo izberite različne postaje.", Toast.LENGTH_SHORT).show();
+			}
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 	}
 
+
+
 	public void szIsci(View view) {
-		if(odhodnaPostaja.equals(prihodnaPostaja)) {
-//			Toast.makeText(context, "Prosimo vnesite različne postaje.", Toast.LENGTH_SHORT).show();
-		}
 		final ArrivalsLookUp arrivals = new ArrivalsLookUp(getApplicationContext());
 		arrivals.execute();
 	}
