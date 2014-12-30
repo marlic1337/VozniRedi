@@ -95,13 +95,20 @@ public class SZMainActivity extends Activity {
 			// naredi poizvedbo
 			try {
 
-				for (int i = 0; i < idPostaje.length; i++) {
+				/*for (int i = 0; i < idPostaje.length; i++) {
 					if(imePostaje[i].equals(String.valueOf(odhodnaPostaja.getSelectedItem()))) {
 						x = idPostaje[i];
+
 					} else if(imePostaje[i].equals(String.valueOf(prihodnaPostaja.getSelectedItem()))) {
 						y = idPostaje[i];
+
 					}
-				}
+				}*/
+
+//				y = 42300; //lj
+//				x = 44008; //rakek
+				y = 44352; //koper
+				x = 43400; //maribor
 
 				dan = szDate.getDayOfMonth();
 				mesec = szDate.getMonth()+1;
