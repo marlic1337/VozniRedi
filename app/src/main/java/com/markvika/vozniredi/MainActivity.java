@@ -47,4 +47,12 @@ public class MainActivity extends Activity {
 		startActivity(viewContact); // start the ViewContact Activity
 	 // end method onItemClick // end viewContactListener
 	}
+    public void LPPMain (View view) {
+        // create an Intent to launch the ViewContact Activity
+        Intent viewContact = new Intent(MainActivity.this, LPPMainActivity.class);
+
+        // pass the selected contact's row ID as an extra with the Intent
+        startActivity(viewContact); // start the ViewContact Activity
+        // end method onItemClick // end viewContactListener
+    }
 }

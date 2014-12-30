@@ -5,7 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_szmain">SZMainActivity</string>
-	<string name="szSet1">Dodaj med priljubljene</string>
+    <string name="szSet1">Dodaj med priljubljene</string>
+    <string name="title_activity_lppmain">LPPMainActivity</string>
+    <string name="lppSet1">Dodaj med priljubljene</string>
 	<string-array name="seznamPostaj">
 		<item>Ajdovščina</item>
 		<item>Anhovo</item>
@@ -276,5 +278,345 @@
 		<item>Žalna</item>
 		<item>Žirovnica</item>
 	</string-array>
+    <string-array name="postajeLPP">
+        <item>Ajdovščina</item>
+        <item>Akademija</item>
+        <item>Ambrožev trg </item>
+        <item>AMZS</item>
+        <item>Andreja Bitenca</item>
+        <item>Archinetova</item>
+        <item>Astra</item>
+        <item>Aškerčeva</item>
+        <item>Avtomontaža</item>
+        <item>Avtosejem</item>
+        <item>Barje</item>
+        <item>Bavarski dvor</item>
+        <item>Belinka</item>
+        <item>Beričevo</item>
+        <item>Besnica ambulanta</item>
+        <item>Besnica kamnolom</item>
+        <item>Besnica</item>
+        <item>Bežigrad</item>
+        <item>Bilečanska</item>
+        <item>Bizovik</item>
+        <item>Blaževo</item>
+        <item>Bokalce</item>
+        <item>Bolnica</item>
+        <item>Bolnica P. Držaja</item>
+        <item>Bonifacija</item>
+        <item>Božičeva</item>
+        <item>Bratislavska</item>
+        <item>Bratov Babnik</item>
+        <item>Bratov Učakar</item>
+        <item>Bratov Židan</item>
+        <item>Brdo</item>
+        <item>Brglezov štradon</item>
+        <item>Brinje</item>
+        <item>Brnčičeva</item>
+        <item>Brod</item>
+        <item>Brodarjev trg</item>
+        <item>BTC‐Emporium</item>
+        <item>BTC‐Kolosej</item>
+        <item>BTC‐tržnica</item>
+        <item>BTC‐uprava</item>
+        <item>Cankarjev dom</item>
+        <item>Capuder</item>
+        <item>Center Stožice ‐ smer S. obvoznica</item>
+        <item>Center Stožice‐ smer Titova</item>
+        <item>Cesta dveh cesarjev</item>
+        <item>Cesta na Brod</item>
+        <item>Cesta na Vevče</item>
+        <item>Cesta v Bizovik</item>
+        <item>Cesta v Gorice</item>
+        <item>Cesta v Zavoglje</item>
+        <item>Cesta XV</item>
+        <item>Chengdujska</item>
+        <item>Clevelandska</item>
+        <item>Čebelarska</item>
+        <item>Čerinova</item>
+        <item>Črnuče</item>
+        <item>Dalmatinova</item>
+        <item>Dobrunje</item>
+        <item>Dobrunje pod Urhom</item>
+        <item>Dolgi most</item>
+        <item>Dornig</item>
+        <item>Drama</item>
+        <item>Draveljska gmajna</item>
+        <item>Dravlje</item>
+        <item>Drenikova</item>
+        <item>Elma</item>
+        <item>Emona</item>
+        <item>Flajšmanova</item>
+        <item>Friškovec</item>
+        <item>Fužine</item>
+        <item>Galjevica</item>
+        <item>Gameljne</item>
+        <item>Gasilska brigada</item>
+        <item>Gerbičeva</item>
+        <item>Glince</item>
+        <item>Glonarjeva</item>
+        <item>Gorjančeva</item>
+        <item>Gornje Poljane</item>
+        <item>Gornji Rudnik</item>
+        <item>Gornji trg</item>
+        <item>GZL</item>
+        <item>Hajdrihova</item>
+        <item>Hotel Lev</item>
+        <item>Hranilniška</item>
+        <item>Hrastje</item>
+        <item>Hruševska</item>
+        <item>Hrušica</item>
+        <item>Hrvatski trg</item>
+        <item>Ilirska</item>
+        <item>Ilovica</item>
+        <item>IMP</item>
+        <item>Iški most</item>
+        <item>Ižanska</item>
+        <item>Jadranska</item>
+        <item>Jamnikarjeva</item>
+        <item>Jana Husa</item>
+        <item>Jarše</item>
+        <item>Javor pri Sostrem K.</item>
+        <item>Javor/K.</item>
+        <item>Jezero</item>
+        <item>Ježa</item>
+        <item>Ježica</item>
+        <item>Jurčkova</item>
+        <item>Kajuhova</item>
+        <item>Kališnikov trg</item>
+        <item>Kamna Gorica</item>
+        <item>Kardeljeva ploščad</item>
+        <item>Kavčičeva</item>
+        <item>Kersnikova</item>
+        <item>Kino Šiška</item>
+        <item>Klinični center</item>
+        <item>Kneza Koclja</item>
+        <item>Kodeljevo</item>
+        <item>Kodeljevo ‐ obračališče</item>
+        <item>Kodrova</item>
+        <item>Kolezija</item>
+        <item>Kolodvor</item>
+        <item>Kolodvor Črnuče</item>
+        <item>Kompas</item>
+        <item>Konzorcij</item>
+        <item>Koprska</item>
+        <item>Koseze</item>
+        <item>Kosmačeva</item>
+        <item>Kozarje</item>
+        <item>Kozler</item>
+        <item>KPL</item>
+        <item>Krekov trg</item>
+        <item>Krimska</item>
+        <item>Križanke</item>
+        <item>Križišče Sostro</item>
+        <item>Krožna pot</item>
+        <item>Kržičeva</item>
+        <item>Lahova pot</item>
+        <item>Lanišče</item>
+        <item>Lavrica</item>
+        <item>Lavrica pri Malči</item>
+        <item>Leskoškova</item>
+        <item>Letališka</item>
+        <item>Lipe</item>
+        <item>Litostroj</item>
+        <item>Litostrojska</item>
+        <item>Livada</item>
+        <item>Lj. Vevče Papirnica</item>
+        <item>Ljubljana Dobrunje</item>
+        <item>Ljubljana Zadvor</item>
+        <item>Ljubljanske brigade</item>
+        <item>Mali Lipoglav</item>
+        <item>Maroltova</item>
+        <item>Medno</item>
+        <item>Medvoška a.p.</item>
+        <item>Mercator</item>
+        <item>Mestni log</item>
+        <item>Mihov štradon</item>
+        <item>Mirje</item>
+        <item>Mostovna</item>
+        <item>Murgle</item>
+        <item>Murkova</item>
+        <item>Na Gmajnici</item>
+        <item>Na jami</item>
+        <item>Na klancu</item>
+        <item>Nadgorica</item>
+        <item>Navje</item>
+        <item>Nove Jarše</item>
+        <item>Nove Jarše‐Šmartinska</item>
+        <item>Nove Stožice</item>
+        <item>Nove Žale</item>
+        <item>Novo naselje</item>
+        <item>Novo Polje</item>
+        <item>NS Rudnik</item>
+        <item>Ob daljnovodu</item>
+        <item>Ob igrišču</item>
+        <item>Ob sotočju</item>
+        <item>Obračališče Vnanje Gorice</item>
+        <item>Obrtna cona</item>
+        <item>Omersova</item>
+        <item>Orlova</item>
+        <item>Osenjakova</item>
+        <item>OŠ Maksa Pečarja</item>
+        <item>OŠ Sostro</item>
+        <item>Pance K.</item>
+        <item>Parmova</item>
+        <item>Peruzzijeva</item>
+        <item>Petrol</item>
+        <item>Plečnikova cerkev</item>
+        <item>Plešičeva</item>
+        <item>Pod Golovcem</item>
+        <item>Pod Hribom</item>
+        <item>Pod Kamno Gorico</item>
+        <item>Pod Rožnikom</item>
+        <item>Podgora</item>
+        <item>Podlipoglav</item>
+        <item>Podmilščakova</item>
+        <item>Podmornica</item>
+        <item>Podpeč</item>
+        <item>Podutik</item>
+        <item>Pohorskega bataljona</item>
+        <item>Pokopališka</item>
+        <item>Polanškova</item>
+        <item>Poliklinika</item>
+        <item>Poljanska</item>
+        <item>Polje</item>
+        <item>Polje‐kolodvor</item>
+        <item>Pošta</item>
+        <item>Pošta Dobrunje</item>
+        <item>Pot na Fužine</item>
+        <item>Pot na Rakovo jelšo</item>
+        <item>Pot v Hrastovec</item>
+        <item>Pot v Smrečje</item>
+        <item>Preglov trg</item>
+        <item>Prekmurska</item>
+        <item>Preval</item>
+        <item>Pri Dogonivar</item>
+        <item>Pri Dolencu</item>
+        <item>Pri Poku</item>
+        <item>Primožev ovinek</item>
+        <item>Primožičeva</item>
+        <item>Privoz</item>
+        <item>Prušnikova</item>
+        <item>Pržan</item>
+        <item>Pržganje Š.</item>
+        <item>Pržganje Š. K.</item>
+        <item>Puhova</item>
+        <item>Radna</item>
+        <item>Rakovnik</item>
+        <item>Rast</item>
+        <item>Rašica</item>
+        <item>Razstavišče</item>
+        <item>Reaktor</item>
+        <item>Remiza</item>
+        <item>Rog</item>
+        <item>Rogovilc</item>
+        <item>Roška</item>
+        <item>Rožičeva</item>
+        <item>Rožna dolina</item>
+        <item>RTV</item>
+        <item>Rudnik</item>
+        <item>Rudnik I</item>
+        <item>Rusjanov trg</item>
+        <item>Ruski car</item>
+        <item>Rutar</item>
+        <item>Sadinja vas</item>
+        <item>Samova</item>
+        <item>Saturnus</item>
+        <item>Sava</item>
+        <item>Savske stolpnice</item>
+        <item>Savsko naselje</item>
+        <item>Selo pri Pancah K.</item>
+        <item>Silos</item>
+        <item>Slovenija avto</item>
+        <item>Slovenijales</item>
+        <item>Smelt</item>
+        <item>Smrekarjevo</item>
+        <item>Sneberje</item>
+        <item>Snoj</item>
+        <item>soča</item>
+        <item>Sostro</item>
+        <item>Spar</item>
+        <item>Spodnji Rudnik</item>
+        <item>Središka</item>
+        <item>Stadion</item>
+        <item>Stan in dom</item>
+        <item>Stanežiče</item>
+        <item>Stara cerkev</item>
+        <item>Stožice</item>
+        <item>Strelišče</item>
+        <item>Streliška</item>
+        <item>Studenec</item>
+        <item>Šemnikar</item>
+        <item>Šentjakob</item>
+        <item>Šentvid</item>
+        <item>Šišenska</item>
+        <item>Škofljica</item>
+        <item>Škofljica Petkovšek</item>
+        <item>Škofljica špica</item>
+        <item>Škofljica žaga</item>
+        <item>Šlandrova</item>
+        <item>Šmartno</item>
+        <item>Šola Jarše</item>
+        <item>Šolska</item>
+        <item>Štepanja vas</item>
+        <item>Štepanjsko naselje</item>
+        <item>Tabor</item>
+        <item>Tacen</item>
+        <item>Tacenski most</item>
+        <item>Tbilisijska</item>
+        <item>Tehnounion</item>
+        <item>Tiki</item>
+        <item>Titova</item>
+        <item>Tivoli</item>
+        <item>Tivolska</item>
+        <item>Tobačna</item>
+        <item>Tomačevo</item>
+        <item>Tomačevska</item>
+        <item>Toplarna</item>
+        <item>Topniška</item>
+        <item>Tovarna Lek</item>
+        <item>Tovorni kolodvor</item>
+        <item>Trata</item>
+        <item>Trebeljevo</item>
+        <item>Trnovo</item>
+        <item>Tržnica Koseze</item>
+        <item>Tržnica Moste</item>
+        <item>Tuji Grm</item>
+        <item>Turist</item>
+        <item>Veliki Lipoglav</item>
+        <item>Veliki štradon</item>
+        <item>Vevče</item>
+        <item>Viadukt</item>
+        <item>Vič</item>
+        <item>Viško polje</item>
+        <item>Vižmarje</item>
+        <item>Vodovodna</item>
+        <item>Volavlje</item>
+        <item>Vošnjakova</item>
+        <item>Vrhovci</item>
+        <item>Yulon</item>
+        <item>Zadobrova</item>
+        <item>Zadružni dom</item>
+        <item>Zadvor</item>
+        <item>Zalog</item>
+        <item>Zaloška</item>
+        <item>Zasavska</item>
+        <item>Zelena jama</item>
+        <item>Zeleni gaj</item>
+        <item>Zg. Besnica</item>
+        <item>Zg. Gameljne</item>
+        <item>Zgonji log</item>
+        <item>Zgornja Šiška</item>
+        <item>Zidarjevec</item>
+        <item>Ziherlova</item>
+        <item>Zmajski most</item>
+        <item>Žale</item>
+        <item>Železna</item>
+        <item>Žito</item>
+        <item>Živalski vrt</item>
+
+
+
+    </string-array>
 
 </resources>

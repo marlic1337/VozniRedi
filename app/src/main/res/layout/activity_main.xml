@@ -12,9 +12,17 @@
 	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="New Button"
+		android:text="Slovenske zeleznice"
 		android:id="@+id/button"
 		android:layout_gravity="center_vertical"
 		android:onClick="SZMain"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LPP"
+        android:id="@+id/button2"
+        android:layout_gravity="center_vertical"
+        android:onClick="LPPMain"/>
 
 </LinearLayout>

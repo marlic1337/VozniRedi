@@ -22,6 +22,11 @@
             android:name=".SZMainActivity"
             android:label="@string/title_activity_szmain" >
         </activity>
+
+        <activity
+            android:name=".LPPMainActivity"
+            android:label="@string/title_activity_lppmain" >
+        </activity>
     </application>
 
 </manifest>
