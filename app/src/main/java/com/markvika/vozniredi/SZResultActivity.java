@@ -3,21 +3,10 @@ package com.markvika.vozniredi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.util.JsonReader;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
-
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class SZResultActivity extends Activity {
