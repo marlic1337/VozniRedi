@@ -1,8 +1,9 @@
 package com.markvika.vozniredi;
 
 import android.app.Activity;
-import android.content.Context;
-import android.os.AsyncTask;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,38 +15,57 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 /**
  * Created by Vika Lampret on 25.12.2014.
  */
 public class LPPMainActivity extends Activity {
-    public static final String ADDRESS_BOTH = "http://www.trola.si/%s/%s";
-    public static final String ADDRESS_SINGLE = "http://www.trola.si/%s";
-
+    private LPPDatabase mDatabaseHelper;
     private Spinner odhodnaPostaja;
+    Button btn;
     private EditText stPostaje;
-    private Button isci;
     private TextView prihodi;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_lppmain);
         odhodnaPostaja=(Spinner) findViewById(R.id.postaje);
         stPostaje=(EditText) findViewById(R.id.stPostaje);
-        prihodi = (TextView) findViewById(R.id.prihodi);
+        mDatabaseHelper = new LPPDatabase(this);
+        // call super's onCreate
+        /*Cursor c = mDatabaseHelper.query(LPPDatabase.TABLE_POSTAJE, LPPDatabase.COL_NAME);
+
+        String[] from = new String[]{LPPDatabase.COL_NAME, LPPDatabase.COL_NAME};
+        int[] to = { android.R.id.text1, android.R.id.text2 };
+        SimpleCursorAdapter adapter2 = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, c, from, to, 0);
+        super.onCreate(savedInstanceState); // call super's onCreate*/
+
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.postajeLPP, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         odhodnaPostaja.setAdapter(adapter);
 
+        //Cursor c = mDatabaseHelper.query(LPPDatabase.TABLE_POSTAJE, LPPDatabase.COL_NAME);
+        //SimpleCursorAdapter adapter2 = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, c, from, to, 0);
+        btn=(Button) findViewById(R.id.Isci);
+        btn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //posredovanje podatkov v LPPRezultatiMainActivity
+                Intent intent = new Intent(LPPMainActivity.this, LPPRezultatiMainActivity.class);
+                Spinner spinner = (Spinner)findViewById(R.id.postaje);
+                String text = spinner.getSelectedItem().toString();
+                intent.putExtra("ET1", text.toString());
+                intent.putExtra("ET2", stPostaje.getText().toString());
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -61,84 +81,84 @@ public class LPPMainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-    public void lookUpArrivals(View v) {
+    /*public void lookUpArrivals(View v) {
         final String currentStation = odhodnaPostaja.getSelectedItem().toString();
         final String currentLine = stPostaje.getText().toString().trim();
-
-        final ArrivalsLookUp arrivals = new ArrivalsLookUp(getApplicationContext());
+        LPPRezultatiActivity l=new LPPRezultatiActivity(currentStation,currentLine);
+        /*final ArrivalsLookUp arrivals = new ArrivalsLookUp(getApplicationContext());
         arrivals.execute(currentStation, currentLine);
-    }
-    private class ArrivalsLookUp extends AsyncTask<String, Void, JSONObject> {
+    }*/
 
-        private final Context context;
+    private void addStation(String name) {
 
-        public ArrivalsLookUp(Context ctx) {
-            this.context = ctx;
+        int st=5;
+        ContentValues values = new ContentValues();
+        String[] ime=new String[1];
+        ime[0]=name;
+        String selectQuery = "SELECT COUNT(*) FROM postaje WHERE name=?";
+        Cursor cursor = mDatabaseHelper.getReadableDatabase().rawQuery(selectQuery,ime);
+        try {
+
+            if (cursor.moveToFirst()) {
+                st=cursor.getInt(0);
+            }
+
+        }
+        finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            if (mDatabaseHelper != null) {
+                mDatabaseHelper.close();
+            }
         }
 
-        @Override
-        protected JSONObject doInBackground(String... params) {
-            // naredi poizvedbo
+        if(st==0) {
+            if (name != null) {
+
+                values.put(LPPDatabase.COL_NAME, name);
+
+            }
             try {
-                final String address;
 
-                if (params[1].equals("")) {
-                    address = String.format(ADDRESS_SINGLE, params[0]);
-                } else {
-                    address = String.format(ADDRESS_SINGLE, params[1]);
-                }
+                mDatabaseHelper.insert(LPPDatabase.TABLE_POSTAJE, values);
 
-                final HttpGet request = new HttpGet(address);
-                // nastavimo zaglavje, da dobimo odgovor
-                // v formatu JSON (sicer bo v HTML)
-                request.addHeader("Accept", "application/json");
+            } catch (LPPDatabase.NotValidException e) {
 
-                final HttpClient hcl = new DefaultHttpClient();
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
-                // spodnji klic dejansko naredi poizvedbo
-                final HttpResponse response = hcl.execute(request);
-                final HttpEntity entity = response.getEntity();
-
-                // odgovor pretvorimo v niz, nato pa niz
-                // pretvorimo v JSON objekt
-                return new JSONObject(EntityUtils.toString(entity));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(JSONObject result) {
-            if (result == null) {
-                Toast.makeText(context, "Prislo je do napake.", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            try {
-                // prejeti objekt prikazemo na ekratnu
-                prihodi.setText(result.toString(2));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            }}
+        else {
+            Toast.makeText(this, "Zadeva je ze v bazi", Toast.LENGTH_SHORT).show();
         }
     }
-    public void lppIsci(View view) {
+    public void LPPRezultatiMain(View view) {
+        // create an Intent to launch the ViewContact Activity
+        Intent viewContact = new Intent(LPPMainActivity.this, LPPRezultatiMainActivity.class);
 
-        final ArrivalsLookUp arrivals = new ArrivalsLookUp(getApplicationContext());
-        arrivals.execute();
+        // pass the selected contact's row ID as an extra with the Intent
+        startActivity(viewContact); // start the ViewContact Activity
+        // end method onItemClick // end viewContactListener
     }
 
     public void dodajPriljubljene(MenuItem item) {
+        String t = odhodnaPostaja.getSelectedItem().toString();
+        addStation(t);
     }
+    public void LPPPriljubljeni(View view) {
+        // create an Intent to launch the ViewContact Activity
+        Intent viewContact = new Intent(LPPMainActivity.this, LPPPriljubljeniActivity.class);
+
+        // pass the selected contact's row ID as an extra with the Intent
+        startActivity(viewContact); // start the ViewContact Activity
+        // end method onItemClick // end viewContactListener
+    }
+
+
 
 }

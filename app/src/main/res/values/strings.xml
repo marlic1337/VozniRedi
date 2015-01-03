@@ -3,12 +3,16 @@
 
     <string name="app_name">VozniRedi</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="menuitem_avtorja">Avtorja</string>
     <string name="title_activity_szmain">SZMainActivity</string>
     <string name="szSet1">Dodaj med priljubljene</string>
     <string name="title_activity_lppmain">LPPMainActivity</string>
+    <string name="title_activity_lpprezultatimain">LPPRezultatiMainActivity</string>
+    <string name="title_activity_lpppriljubljeni">LPPPriljubljeniActivity</string>
+    <string name="title_activity_avtorja">Avtorja</string>
     <string name="lppSet1">Dodaj med priljubljene</string>
-	<string-array name="seznamPostaj">
+
+    <string-array name="seznamPostaj">
 		<item>Ajdovščina</item>
 		<item>Anhovo</item>
 		<item>Atomske Toplice hotel</item>
@@ -281,7 +285,7 @@
     <string-array name="postajeLPP">
         <item>Ajdovščina</item>
         <item>Akademija</item>
-        <item>Ambrožev trg </item>
+        <item>Ambrožev trg</item>
         <item>AMZS</item>
         <item>Andreja Bitenca</item>
         <item>Archinetova</item>

@@ -22,11 +22,28 @@
             android:name=".SZMainActivity"
             android:label="@string/title_activity_szmain" >
         </activity>
-
         <activity
             android:name=".LPPMainActivity"
-            android:label="@string/title_activity_lppmain" >
+            android:label="@string/title_activity_lppmain"
+            android:parentActivityName=".MainActivity">
         </activity>
+        <activity
+            android:name=".LPPRezultatiMainActivity"
+            android:label="@string/title_activity_lpprezultatimain"
+            android:parentActivityName=".LPPMainActivity">
+        </activity>
+        <activity
+            android:name=".LPPPriljubljeniActivity"
+            android:label="@string/title_activity_lpppriljubljeni"
+            android:parentActivityName=".LPPMainActivity">
+        </activity>
+        <activity
+            android:name=".Avtorja"
+            android:label="@string/title_activity_avtorja"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+
     </application>
 
 </manifest>
