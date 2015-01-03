@@ -70,8 +70,9 @@ public class Trip {
 	public String toString() {
 		String temp = "";
 		for (int i = 0; i < as.size(); i++) {
-			temp += ds.get(i)+" "+dd.get(i)+"\n"+as.get(i)+" "+ad.get(i)+"\n"+tn.get(i)+"\n";
+//			temp += ds.get(i)+" "+dd.get(i)+"\n"+as.get(i)+" "+ad.get(i)+"\n"+tn.get(i)+"\n";
+			temp += "Vlak: "+tn.get(i)+"\nOdhod: "+ds.get(i)+" ob: "+dd.get(i)+"\nPrihod: "+as.get(i)+" ob: "+ad.get(i)+"\n";
 		}
-		return temp;
+		return temp+"\n";
 	}
 }

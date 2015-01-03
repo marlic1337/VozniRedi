@@ -46,7 +46,6 @@ public class SZMainActivity extends Activity {
 		odhodnaPostaja = (Spinner) findViewById(R.id.szOdhod);
 		prihodnaPostaja = (Spinner) findViewById(R.id.szPrihod);
 		szDate = (DatePicker) findViewById(R.id.SZDatePicker);
-		arrivals = (TextView) findViewById(R.id.prihodiTV);
 
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 				R.array.seznamPostaj, android.R.layout.simple_spinner_item);
@@ -54,29 +53,6 @@ public class SZMainActivity extends Activity {
 		odhodnaPostaja.setAdapter(adapter);
 		prihodnaPostaja.setAdapter(adapter);
 
-	}
-
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_szmain, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-
-		//noinspection SimplifiableIfStatement
-		if (id == R.id.action_settings) {
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
 	}
 
 	private class ArrivalsLookUp extends AsyncTask<String, Void, JSONObject> {
@@ -95,7 +71,7 @@ public class SZMainActivity extends Activity {
 			// naredi poizvedbo
 			try {
 
-				/*for (int i = 0; i < idPostaje.length; i++) {
+				for (int i = 0; i < idPostaje.length; i++) {
 					if(imePostaje[i].equals(String.valueOf(odhodnaPostaja.getSelectedItem()))) {
 						x = idPostaje[i];
 
@@ -103,12 +79,12 @@ public class SZMainActivity extends Activity {
 						y = idPostaje[i];
 
 					}
-				}*/
+				}
 
 //				y = 42300; //lj
 //				x = 44008; //rakek
-				y = 44352; //koper
-				x = 43400; //maribor
+//				y = 44352; //koper
+//				x = 43400; //maribor
 
 				dan = szDate.getDayOfMonth();
 				mesec = szDate.getMonth()+1;
@@ -139,27 +115,8 @@ public class SZMainActivity extends Activity {
 			return null;
 		}
 
-//		public boolean isInternetAvailable() {
-//			try {
-//				InetAddress ipAddr = InetAddress.getByName("google.com"); //You can replace it with your name
-//				if (!ipAddr.isReachable(1000)) {
-//					return false;
-//				} else {
-//					return true;
-//				}
-//
-//			} catch (Exception e) {
-//				return false;
-//			}
-//
-//		}
-
 		@Override
 		protected void onPostExecute(JSONObject result) {
-//			if(!isInternetAvailable()) {
-//				Toast.makeText(context, "Ni internetne povezave.", Toast.LENGTH_LONG).show();
-//				return;
-//			} else
 			if (result == null) {
 				Toast.makeText(context, "Prislo je do napake.", Toast.LENGTH_SHORT).show();
 				return;
@@ -169,25 +126,21 @@ public class SZMainActivity extends Activity {
 				// prejeti objekt prikazemo na ekratnu
 //				arrivals.setText(result.toString(2));
 //				arrivals.setText(address);
-				Intent json = new Intent(SZMainActivity.this, SZResultActivity.class);
-				json.putExtra("json", result.toString());
-				startActivity(json);
-			if(y == 0){
-				Toast.makeText(context, "Prosimo izberite različne postaje.", Toast.LENGTH_SHORT).show();
-			}
+				if(y == 0){
+					Toast.makeText(context, "Prosimo izberite različne postaje.", Toast.LENGTH_SHORT).show();
+				} else {
+					Intent json = new Intent(SZMainActivity.this, SZResultActivity.class);
+					json.putExtra("json", result.toString());
+					startActivity(json);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 	}
 
-
-
 	public void szIsci(View view) {
 		final ArrivalsLookUp arrivals = new ArrivalsLookUp(getApplicationContext());
 		arrivals.execute();
-	}
-
-	public void dodajPriljubljene(MenuItem item) {
 	}
 }
