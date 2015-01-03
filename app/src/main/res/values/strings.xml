@@ -11,6 +11,8 @@
 	<string name="title_activity_lpppriljubljeni">LPPPriljubljeniActivity</string>
 	<string name="title_activity_avtorja">Avtorja</string>
 	<string name="lppSet1">Dodaj med priljubljene</string>
+	<string name="vstop"><u>Izberite vstopno postajo:</u>.</string>
+	<string name="izstop"><u>Izberite izstopno postajo:</u>.</string>
 
     <string-array name="seznamPostaj">
         <item>Ajdovščina</item>

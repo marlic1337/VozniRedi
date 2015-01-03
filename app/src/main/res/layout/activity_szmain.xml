@@ -16,10 +16,24 @@
 		android:layout_alignParentTop="true"
 		android:layout_alignParentStart="true">
 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/vstop"
+			android:textStyle="italic"
+			android:id="@+id/textView7"/>
+
 		<Spinner
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/szOdhod"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/izstop"
+			android:textStyle="italic"
+			android:id="@+id/textView8"/>
 
 		<Spinner
 			android:layout_width="match_parent"
